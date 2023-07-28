@@ -1,0 +1,222 @@
+@import "_font.scss";
+.canvas-container {
+  width: 50%;
+  background-color: #efefef;
+  border-radius: 1em;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+  border-radius: 1em;
+}
+::-moz-progress-bar {
+  background-color: #664aff;
+  border-radius: 1em;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Hubot;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+
+  h1 {
+    margin: 0;
+    font-family: "Hubot-Bold";
+  }
+}
+
+.appContainer {
+  display: flex;
+  padding: 2em;
+  overflow: hidden;
+  .content {
+    display: flex;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 0;
+
+    .secondInputContainer {
+      label {
+        border: 3px dashed #664aff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 10em;
+        padding: 0.5em;
+        margin-bottom: 2em;
+        justify-content: center;
+        transition: 250ms;
+        &:hover {
+          background-color: #664aff;
+          color: white;
+        }
+        &:hover {
+          fill: white;
+        }
+        svg {
+          width: 6%;
+          height: 6%;
+        }
+      }
+      .fileInput {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: none;
+        cursor: pointer;
+      }
+    }
+    .controlsSelect {
+      display: flex;
+      width: 100%;
+      margin: 1em 0;
+      .action {
+        border-radius: 1em;
+        border: 2px solid #664aff;
+        margin: 0.5em;
+        display: flex;
+        padding: 0.4em 1em;
+        transition: all 100ms;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+          background-color: #664aff;
+          color: white;
+        }
+        &:hover svg {
+          fill: white;
+        }
+      }
+      .hdrContainer {
+        label {
+          border: 2px solid #664aff;
+          cursor: pointer;
+          display: flex;
+          padding: 0.4em 1em;
+          border-radius: 1em;
+          margin: 0.5em;
+          margin-left: 0;
+          display: flex;
+          align-items: center;
+          transition: all 100ms;
+          &:hover {
+            background-color: #664aff;
+            color: white;
+          }
+          &:hover svg {
+            fill: white;
+          }
+        }
+        .hdrInput {
+          opacity: 0;
+          display: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .item {
+      padding: 1em 2em;
+      justify-content: space-between;
+      border-top: 1px solid #ccc;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      .controls {
+        display: flex;
+        align-items: center;
+        .delete {
+          background-color: transparent;
+          padding: 0.3em;
+          margin-left: 1em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #ff3737;
+          background-color: #ff3737;
+          img {
+            width: 2em;
+            height: 2em;
+          }
+        }
+        button {
+          margin: 1em;
+          margin-left: 0;
+          font-size: 1em;
+          color: white;
+          background-color: #664aff;
+          cursor: pointer;
+          padding: 0.5em 1em;
+
+          text-align: center;
+          border-radius: 10em;
+          margin-bottom: 1em;
+          border: #413afe 3px solid;
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}
+/* Styles pour le conteneur */
+.fileInputContainer {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #fff;
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #664aff;
+    padding: 7em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
+    border-radius: 1.5em;
+    border-style: dashed;
+  }
+  .fileInput {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
