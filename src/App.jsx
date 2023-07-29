@@ -123,6 +123,7 @@ function App() {
   return (
     <div>
       <header ref={headerContainer}>
+        <img src="logo.svg" alt="" />
         <h1>GLB PREVIEW</h1>
       </header>
       <div

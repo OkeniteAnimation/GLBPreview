@@ -30,11 +30,13 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
   padding: 2em;
   align-items: center;
   border-bottom: 1px solid #ccc;
-
+  gap: 1em;
+  img {
+    width: 4em;
+  }
   h1 {
     margin: 0;
     font-family: "Hubot-Bold";
