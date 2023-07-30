@@ -4,7 +4,10 @@
 
 # GLBPreview
 > Outil de génération d'image à partir d'un fichier glb 
-
+## Interface
+<p align="center">
+    <img width="100%" src="./screenshots/preview.png" alt="GLBPREVIEW logo">
+</p>
 
 ## Installation 
 
