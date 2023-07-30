@@ -1,67 +1,30 @@
 <p align="center">
-    <img width="180" src="./design/GLBPreview.svg" alt="Vite logo">
+    <img width="180" src="./screenshots/GLBPreview.png" alt="GLBPREVIEW logo">
 </p>
 
 # GLBPreview
-> Outil simplifié de Vite. Telechargement de boilerplate en ligne de commande.
+> Outil de génération d'image à partir d'un fichier glb 
 
-<br>
-✅ ***N'HESITEZ PAS A FORK CE PROJET POUR CRÉEZ VOTRE PROPRE VITE PERSONALISÉ***
-<br>
 
 ## Installation 
 
-Pour commencer, il faut installer Okévite depuis npm :
+Pour commencer, clonner le projet
 
 ```bash
-npm i -g okevite 
+git clone https://github.com/OkeniteAnimation/GLBPreview.git
 ```
-Ensuite vous pouvez lancer Okévite avec la commande 
+Ensuite vous pouvez lancer le projet avec la commande 
 
 ```bash
-okevite
+npm run dev 
 ```
-
-## Fonctionnement 
- 
-Apres avoir executer la commande okevite, le script se lance.
-
-<p align="center">
-    <img width="1800" src="./sources/okevite.png" alt="Vite logo">
-</p>
-
-Selectionnez le framework voulu, le dossier se télécharge.
-
-## Configuration de votre Okévite
-
-Pour personaliser okevite, il suffit de modifier certains parametres dans le fichier okevite.js
-
--  Le lien de votre repo contenant vos boilerplate
--  Le nom des dossiers ou se trouve vos boilerplate 
-
-Pour cela remplacer le lien par le votre (ligne 42)
-Et remplacer dans la variable option, vos nom de dossiers.
-
-<br>
-
-## Publication 
-
-Les etapes pour publier le paquet sur npm.
-
-Tout d'abord assurer vous de changer le numero de version a chaque publication sur npm. Vous pouvez changer le numero dans le fichier ```package.json``` 
-
-Connectez vous à npm depuis le navigateur en lançant cette commande.
+Pour build le projet 
 
 ```bash
-npm login
-```
-Ensuite vous puvez publier une nouvelle version du projet sur votre npm en executant la commande : 
-
-```bash
-npm publish
+npm run build 
 ```
 
-Evidement si vous avez fork le projet il faudra changer son nom dans le package.json 
+Vous pouvez publié votre GLBPREVIEW sur votre serveur ftp ou encore sur vercel ou heroku.
 
 ## Developpeur
 
