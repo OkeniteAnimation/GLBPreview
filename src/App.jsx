@@ -1,5 +1,7 @@
 import React, { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas, useThree, useLoader, useFrame } from "@react-three/fiber";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader";
+
 import {
   OrbitControls,
   Environment,
@@ -31,7 +33,13 @@ function CameraControls({ cameraPosition }) {
 
 function Model({ url, setModelScreenshot }) {
   const { scene, gl, camera } = useThree();
-  const gltf = useLoader(GLTFLoader, url);
+  const gltf = useLoader(GLTFLoader, url, (loader) => {
+    const dracoLoader = new DRACOLoader();
+
+    dracoLoader.setDecoderPath("./draco/"); // Spécifiez le chemin du décodeur DRACO
+    loader.setDRACOLoader(dracoLoader);
+  });
+
   const modelRef = useRef();
 
   useEffect(() => {
